@@ -60,8 +60,6 @@ app.get("/posts/:postName", (req, res) => {
         storedTitle: post.title,
         storedContent: post.content
       });
-    } else {
-      console.log("Match is not found");
     }
   })
    
