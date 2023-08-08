@@ -51,8 +51,15 @@ app.post("/compose", (req, res) => {
 })
 
 app.get("/posts/:postName", (req, res) => {
-  console.log(req.params.postName);
-})
+  const requestedTitle = req.params.postName;
+  posts.forEach(function (post) {
+    const storedTitle = post.title;
+    if( requestedTitle === storedTitle) {
+      console.log("Match Found");
+    }
+  })
+   
+}) 
 
 app.listen(3000, function() {
   console.log("Server started on port 3000");
