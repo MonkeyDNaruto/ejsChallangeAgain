@@ -61,7 +61,7 @@ app.get("/posts/:postName", (req, res) => {
         storedContent: post.content
       });
     } else {
-      console.log("Match Not Found");
+      console.log("Match is not found");
     }
   })
    
